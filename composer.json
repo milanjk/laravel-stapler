@@ -11,7 +11,7 @@
     ],
     "require": {
         "php": ">=5.4.0",
-        "codesleeve/stapler": "1.0.*",
+        "sonuku/stapler": "dev-iconinc",
         "laravel/framework": "4.*|5.*"
     },
     "autoload": {
@@ -22,5 +22,11 @@
             "Codesleeve\\LaravelStapler\\": "src/"
         }
     },
-    "minimum-stability": "stable"
+    "minimum-stability": "stable",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "http://github.com/sonuku/stapler"
+        }
+    ]
 }
