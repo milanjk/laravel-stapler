@@ -16,6 +16,7 @@ Laravel-Stapler was created by [Travis Bennett](https://twitter.com/tandrewbenne
 * [Commands](#commands)
   * [Fasten](#fasten)
   * [Refresh](#refresh)
+* [Troubleshooting](#troubleshooting)
 * [Contributing](#contributing)
 
 ## Requirements
@@ -61,7 +62,7 @@ If you've been using Stapler (prior to v1.0.0-Beta4) in your Laravel app, you no
 
 * In your s3 configuration, instead of passing 'key', 'secret', 'region', and 'scheme' options, you'll now need to pass a single 's3_client_config' array containing these options (and any others you might want).  These will be passed directly to the s3ClientFactory when creating an S3 client.  Passing the params as an array now allows you to configure your s3 client (for a given model/attachment) however you like.  See:  http://docs.aws.amazon.com/aws-sdk-php/guide/latest/configuration.html#client-configuration-options
 
-* In your s3 configuration, instead of passing 'bucket' and 'ACL', you'll now need to pass a single 's3_object_config' array containing these values (this is used by the S3Client::putObject() method).  See:  http://docs.aws.amazon.com/aws-sdk-php/latest/class-Aws.S3.S3Client.html#_putObject
+* In your s3 configuration, instead of passing 'Bucket' and 'ACL', you'll now need to pass a single 's3_object_config' array containing these values (this is used by the S3Client::putObject() method).  See:  http://docs.aws.amazon.com/aws-sdk-php/latest/class-Aws.S3.S3Client.html#_putObject
 
 * The ':laravel_root' interpolation has been changed to ':app_root'
 
@@ -163,6 +164,10 @@ Reprocess only the photo attachment on the ProfilePicture model:
 
 Reprocess a list of attachments on the ProfilePicture model:
 `php artisan stapler:refresh TestPhoto --attachments="foo, bar, baz, etc"`
+
+## Troubleshooting
+Before you submit an issue or create a pull request, please take a look at the [Troubleshooting Section](https://github.com/CodeSleeve/stapler/blob/master/docs/troubleshooting.md) section of the Stapler package.
+There's a very good chance that many (if not all) of the issues you're having with this package are related to the base stapler package and have already been addressed there.
 
 ## Contributing
 This package is always open to contributions:
